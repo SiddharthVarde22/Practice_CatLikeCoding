@@ -55,6 +55,12 @@ public class Searching_Sorting : MonoBehaviour
             InsertionSort = false;
             InsertionSortMethod();
         }
+
+        if(mergeSort)
+        {
+            mergeSort = false;
+            MergeSort(m_numbers);
+        }
     }
 
     void LinearSearch()
@@ -209,6 +215,65 @@ public class Searching_Sorting : MonoBehaviour
             }
 
             m_numbers[j + 1] = l_lastNumber;
+        }
+    }
+
+    void MergeSort(int[] a_array)
+    {
+        if(a_array.Length > 1)
+        {
+            int l_middle = a_array.Length / 2;
+            int[] l_leftArray = new int[l_middle];
+            int[] l_rightArray = new int[a_array.Length - l_middle];
+
+            for(int i = 0; i < l_leftArray.Length; i++)
+            {
+                l_leftArray[i] = a_array[i];
+            }
+
+            for(int i = 0; i < l_rightArray.Length; i++)
+            {
+                l_rightArray[i] = a_array[l_middle + i];
+            }
+
+            MergeSort(l_leftArray);
+            MergeSort(l_rightArray);
+
+            SortAndMerge(a_array, l_leftArray, l_rightArray);
+        }
+    }
+
+    void SortAndMerge(int[] a_array, int[] l_leftArray, int[] l_rightArray)
+    {
+        int i = 0, j = 0, l_index = 0;
+
+        while(i < l_leftArray.Length && j < l_rightArray.Length)
+        {
+            if(l_leftArray[i] > l_rightArray[j])
+            {
+                a_array[l_index] = l_rightArray[j];
+                j++;
+            }
+            else
+            {
+                a_array[l_index] = l_leftArray[i];
+                i++;
+            }
+            l_index++;
+        }
+
+        while(i < l_leftArray.Length)
+        {
+            a_array[l_index] = l_leftArray[i];
+            i++;
+            l_index++;
+        }
+
+        while(j < l_rightArray.Length)
+        {
+            a_array[l_index] = l_rightArray[j];
+            j++;
+            l_index++;
         }
     }
 }
