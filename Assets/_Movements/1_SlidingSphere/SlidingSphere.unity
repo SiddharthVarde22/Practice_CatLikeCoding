@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 283407069}
   - component: {fileID: 283407068}
   - component: {fileID: 283407067}
+  - component: {fileID: 283407070}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -287,7 +288,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 100
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 6
   m_Depth: -1
   m_CullingMask:
@@ -312,13 +313,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283407066}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalRotation: {x: -0.25533864, y: 0.6277437, z: -0.22943144, w: -0.6986425}
+  m_LocalPosition: {x: 5.353633, y: 5.2602916, z: 0.9607083}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &283407070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283407066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3ff771998a9de49bcdd7406ca5e038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_objectToFocus: {fileID: 2070810848}
+  m_distance: 5
+  m_focusRadius: 1
 --- !u!1 &353482565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1777,7 @@ MonoBehaviour:
   m_maxAirAcceleration: 1
   m_jumpHeight: 2
   m_maxAirJumps: 1
+  m_maxGroundAngle: 25
   m_rigidBody: {fileID: 2070810851}
 --- !u!54 &2070810851
 Rigidbody:
@@ -1786,7 +1803,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &2079207798
