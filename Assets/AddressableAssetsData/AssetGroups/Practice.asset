@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Practice
+  m_EditorClassIdentifier: 
+  m_GroupName: Practice
+  m_Data:
+    m_SerializedData: []
+  m_GUID: abf6128c27e98ea47a34ea5a84dd4713
+  m_SerializeEntries:
+  - m_GUID: 08aa1f4330b24d44387be75018d287bb
+    m_Address: Assets/_Practice/Addressables/Addressable_Cube.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Practice
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 1ba5f42bd40c8094bb5b884a97ac1236, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5f4d535676b60f94d90e6e18657ad7ae, type: 2}
+    - {fileID: 11400000, guid: 4963e80bd2d39d5499d72f1fe1e64082, type: 2}
