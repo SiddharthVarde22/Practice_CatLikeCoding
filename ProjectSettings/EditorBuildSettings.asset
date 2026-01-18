@@ -4,5 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Practice/NetCode_GameObjecsts/NetCode_GO.unity
+    guid: a262ddd220261bb48a2e1e50c26d3248
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 44253ee51a2cd3345b9f9b081b2e101d, type: 2}
